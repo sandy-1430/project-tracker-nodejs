@@ -1,0 +1,25 @@
+{
+  "name": "tracker-node",
+  "version": "1.0.0",
+  "description": "tracker using node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test tracker",
+    "start": "node index.js",
+    "build": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "sathish",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "log4js": "^6.9.1",
+    "mongoose": "^7.0.1",
+    "nodemon": "^3.1.0",
+    "validator": "^13.12.0"
+  }
+}

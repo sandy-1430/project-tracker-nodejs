@@ -1,0 +1,28 @@
+const mongoose = require('mongoose');
+const { secret } = require('./secret');
+
+mongoose.set('strictQuery', false);
+
+// local url 
+// const DB_URL = 'mongodb://10.187.156.163:27017/CC-Tracker';
+ 
+// mongodb url
+const MONGO_URI = secret.db_url;
+
+const connectDB = async () => {
+  mongoose.connect(MONGO_URI);
+  mongoose.connection.on('error', err => {
+        console.log("connection failed");
+    })
+    mongoose.connection.on('connected', err => {
+        console.log("connection sucess");
+    })
+  // try { 
+  //   await mongoose.connect(MONGO_URI);
+  //   console.log('mongodb connection success!');
+  // } catch (err) {
+  //   console.log('mongodb connection failed!', err.message);
+  // }
+};
+
+module.exports = connectDB;
